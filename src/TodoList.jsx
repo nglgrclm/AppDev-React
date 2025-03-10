@@ -131,10 +131,13 @@ export default function TodoList() {
                 />
                 <span>{task.text}</span>
                 <div className="task-actions">
-                  <button onClick={() => startEditing(task.id)}>
+                   <button onClick={() => startEditing(task.id)}>
                     <i className="fas fa-edit"></i> Edit
-                  </button>
-                </div>
+                </button>
+                   <button onClick={() => removeTask(task.id)}>
+                    <i className="fas fa-trash"></i> Delete
+                </button>
+              </div>
               </>
             )}
           </li>
