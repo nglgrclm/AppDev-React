@@ -1,0 +1,124 @@
+:root {
+  --background-color: #f0f0f0;
+  --text-color: black;
+  --button-background: #a78fd4;
+  --button-text-color: white;
+  --button-hover-background: #8256bc; /* Add hover background color */
+  --input-background: white;
+  --input-border: black;
+  --completed-color: gray;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: white;
+  --button-background: #333;
+  --button-text-color: white;
+  --button-hover-background: #555; /* Add hover background color for dark theme */
+  --input-background: #333;
+  --input-border: white;
+  --completed-color: gray;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Lato', sans-serif; /* Apply Lato font to the body */
+}
+
+.todo-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Lato', sans-serif; /* Apply Lato font to the heading */
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-background);
+  flex: 1;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+button:hover,
+button:focus {
+  background-color: var(--button-hover-background); /* Apply hover background color */
+}
+
+button.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  margin: 0 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--input-border);
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.task-actions button:hover,
+.task-actions button:focus {
+  background-color: var(--button-hover-background); /* Apply hover background color */
+}
